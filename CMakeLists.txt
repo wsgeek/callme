@@ -13,3 +13,7 @@ enable_testing()
 add_subdirectory(UnitTests)
 add_subdirectory(pretty)
 add_subdirectory(Benchmark)
+
+# Create an interface library with Impl/callme
+add_library(callme INTERFACE)
+target_include_directories(callme INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/Impl)
